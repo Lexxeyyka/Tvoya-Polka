@@ -1,9 +1,17 @@
+@import 'profile_page.css';
+@import 'recover_page.css';
+@import 'start_page.css';
+
 body{
     background: #e9fcb2 !important;
     font-family: 'Roboto Condensed', sans-serif !important;
     padding-bottom: 830px;
     box-sizing: border-box;
 
+}
+
+a:hover {
+    text-decoration: none !important;
 }
 
 html {

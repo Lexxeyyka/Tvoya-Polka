@@ -3,7 +3,6 @@
     color: #453815;
     padding: 15px 20px;
     margin: 65px 0 0 0;
-    height: 186px;
     background-color: #dcf396;
     border-radius: 5px;
 }
@@ -30,7 +29,8 @@
 .UserBlock__money__icon{
     font-size: 15px;
 }
-.UserBlock__money__link__btnTake{
+.UserBlock__btn {
+    display: block;
     margin-top: 5px;
     font-size: 17px;
     padding: 5px;
@@ -38,6 +38,9 @@
     color: #fff;
     background-color: #9db74c;
     text-align: center;
+}
+.UserBlock__btn:hover {
+    color: #fff;
 }
 .DateBlock__dateEnding__link__btnExtend{
     margin-top: 5px;

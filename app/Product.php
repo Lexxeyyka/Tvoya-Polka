@@ -6,11 +6,24 @@ use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
 {
+    /**
+     * @var string
+     */
+    protected $table = 'Products';
+
+    /**
+     * @var string
+     */
+    protected $primaryKey = 'id_product';
+
+    /**
+     * @var array
+     */
     protected $fillable = [
-        'rent_id',
-        'title',
+        'product_name',
         'price',
-        'total_amount',
-        'sold_amount',
+        'amount',
+        'amount_of_sold',
+        'id_rent',
     ];
 }

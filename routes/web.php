@@ -11,13 +11,29 @@
 |
 */
 
-Route::get('/', 'MainController@showHome');
+Route::get('/', 'MainController@showHome')->name('home');
 
-//Route::middleware(['guest'])->group(function () {
+/**
+ * Роутинг, если пользователь авторизирован
+ */
+Route::middleware(['auth'])->group(function () {
     Route::get('profile/{action?}', 'RenterController@showProfile')
-        ->where('action', 'sold|now');
-//});
+        ->where('action', 'sold|now')->name('user.profile');
+    Route::get('profile/logout', 'RenterController@getLogout')->name('user.logout');
+});
+
+/**
+ * Роутинг, если пользователь не авторизирован
+ */
+Route::middleware(['guest'])->group(function() {
+    Route::post('login', 'RenterController@postLogin')->name('user.login');
+});
 
 Route::get('recover', 'RecoverController@showRecover');
-
 Route::get('about', 'MainController@showAbout');
+
+Route::get('pass', function() {
+    $password = request()->get('p');
+
+    return Hash::make($password);
+});

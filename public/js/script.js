@@ -26,9 +26,9 @@ jQuery('document').ready(function () {
     $('.popup .close_window, .overlay').click(function (){
         $('.popup, .overlay').css({'opacity':'0', 'visibility':'hidden'});
     });
-    $('.LogIn, .LogIn__menu').click(function (e){
-        $('.popup, .overlay').css({'opacity':'1', 'visibility':'visible'});
+    $('a[href="#login"]').click(function (e){
         e.preventDefault();
+        $('.popup, .overlay').css({'opacity':'1', 'visibility':'visible'});
     });
 
 
