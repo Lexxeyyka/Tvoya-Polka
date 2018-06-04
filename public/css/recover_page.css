@@ -1,0 +1,59 @@
+/*RECOVERING PASSWORD*/
+
+
+
+.PassRecovering{
+    margin: 200px 0 200px 0;
+}
+
+.PassRecovering__title{
+    color: #453815;
+    font-size: 36px;
+
+}.PassRecovering__prompt{;
+     color: #453815;
+     font-size: 18px;
+ }
+
+ /*Поле ввода*/
+
+.PassRecovering__inputPhone{
+    font-family: Roboto !important;
+    margin-top: 10px;
+    width: 12em !important;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #d9d9d9;
+}
+
+
+.PassRecovering__inputPhone:focus{
+    outline: none;
+
+}
+
+
+/*Кнопка*/
+
+
+
+.PassRecovering__buttonRecovering{
+    margin-top: 10px;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+    color: white;
+    padding: 6px 30px 6px 30px;
+    background-color: #adc359;
+    border: 0
+
+}
+
+.PassRecovering__buttonRecovering:hover{
+    cursor: pointer;
+    background-color: #cad982
+}
+
+.PassRecovering__buttonRecovering:focus{
+    outline: none
+}
+

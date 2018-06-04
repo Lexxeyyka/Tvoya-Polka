@@ -1,0 +1,113 @@
+/*PROFILE*/
+.UserBlock{
+    color: #453815;
+    padding: 15px 20px;
+    margin: 65px 0 0 0;
+    height: 186px;
+    background-color: #dcf396;
+    border-radius: 5px;
+}
+.UserBlock__user__fullName{
+    font-size: 22px;
+    line-height: 1.2;
+}
+.DateBlock{
+    color: #453815;
+    font-size: 17px;
+    padding: 15px 20px;
+    margin: 25px 0 0 0;
+    height: auto;
+    background-color: #dcf396;
+    border-radius: 5px;
+}
+.ProductsBlock{
+    padding-bottom: 15px;
+    margin: 65px 0 0 0;
+    height:auto;
+    background-color: #dcf396;
+    border-radius: 5px;
+}
+.UserBlock__money__icon{
+    font-size: 15px;
+}
+.UserBlock__money__link__btnTake{
+    margin-top: 5px;
+    font-size: 17px;
+    padding: 5px;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #9db74c;
+    text-align: center;
+}
+.DateBlock__dateEnding__link__btnExtend{
+    margin-top: 5px;
+    font-size: 17px;
+    padding: 5px;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #9db74c;
+    text-align: center;
+}
+.UserBlock__money__link:hover{
+    text-decoration: none;
+}
+.ProductsBlock__header__switch__item{
+}
+.ProductsBlock__header__switch__item__link:hover{
+    text-decoration: none;
+}
+.ProductsBlock__header__switch__item__link{
+    color: #000;
+    font-size: 20px;
+}
+.ProductsBlock__header__switch__item__link__InShelf{
+    color: #677b36;
+}
+.ProductsBlock__header__switch__item__link__Sold{
+    color: #677b36;
+}
+.ProductsTable{
+    margin: 0 15px 0 15px;
+    background-color: #fff;
+    height: auto;
+    width: auto;
+}
+.ProductsTable__table{
+    margin-bottom: 0 !important;
+}
+td, th{
+    border-color: #fdfbff !important;
+}
+.ProductsTable__table__head{
+    background-color: #c3d58c;
+}
+.ProductsBlock__header{
+    padding:15px;
+}
+
+.profilePage{
+    margin-bottom: 200px;
+}
+
+@media only screen and (max-width: 440px){
+    .ProductsBlock__header__switch__item__link__InShelf, .ProductsBlock__header__switch__item__link__Sold{
+        font-size:18px;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .ProductsBlock__header__switch__item__link__InShelf, .ProductsBlock__header__switch__item__link__Sold{
+        font-size:15px;
+    }
+    td, th{
+        font-size: 13px;
+    }
+}
+@media only screen and (max-width: 360px) {
+    .ProductsBlock__header__switch__item__link__InShelf, .ProductsBlock__header__switch__item__link__Sold{
+        font-size:10px;
+    }
+    td, th{
+        font-size: 8px;
+    }
+}
