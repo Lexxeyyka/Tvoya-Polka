@@ -65,6 +65,12 @@
                     <a href="#" class="MenuBar__link">
                         <i class="MenuBar__link__iconClose fas fa-times"></i>
                     </a>
+                    @if (Auth::check())
+                    <a href="{{ route('user.logout') }}" class="btn_logout_slide MenuBar__link">
+                        <i class="fas fa-sign-out-alt"></i>
+                    </a>
+                    @else
+                    @endif
                 </div>
                 <nav>
                     <ul class="SlideMenu d-flex flex-column-reverse justify-content-start">
@@ -77,9 +83,15 @@
                         <li class="SlideMenu__item">
                             <a href="#footer" class="menulink menu__item__link">Контакты</a>
                         </li>
+                        @if (Auth::check())
                         <li class="SlideMenu__item">
-                            <a href="#" class="LogIn__menu menu__item__link">Личный кабинет</a>
+                            <a href="{{ route('user.profile') }}" class="LogIn__menu menu__item__link">Личный кабинет</a>
                         </li>
+                        @else
+                        <li class="SlideMenu__item">
+                            <a href="#login" class="LogIn__menu menu__item__link">Авторизироваться</a>
+                        </li>
+                        @endif
                     </ul>
                 </nav>
             </div>
