@@ -3,17 +3,18 @@
 
 
 .PassRecovering{
-    margin: 200px 0 200px 0;
+    margin: 100px 0 200px 0;
 }
 
 .PassRecovering__title{
     color: #453815;
     font-size: 36px;
 
-}.PassRecovering__prompt{;
-     color: #453815;
-     font-size: 18px;
- }
+}
+.PassRecovering__prompt{;
+    color: #453815;
+    font-size: 18px;
+}
 
  /*Поле ввода*/
 
@@ -56,4 +57,28 @@
 .PassRecovering__buttonRecovering:focus{
     outline: none
 }
+/*Медиазапросы*/
+@media only screen and (max-width: 500px){
 
+    .PassRecovering__title{
+        color: #453815;
+        font-size: 32px;
+
+    }
+
+    .PassRecovering{
+        margin: 50px 0 100px 0;
+    }
+
+}
+
+@media only screen and (max-width: 320px){
+
+    .PassRecovering__inputPhone{
+        padding: 7px;
+    }
+
+    .PassRecovering__prompt{;
+        font-size: 15px;
+    }
+}

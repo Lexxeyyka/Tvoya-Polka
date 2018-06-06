@@ -35,13 +35,26 @@ jQuery('document').ready(function () {
 
 
 
-    $(document).ready(function(){
-        $('.menulink').click( function(){ // ловим клик по ссылке с классом
-            var scroll_el = $(this).attr('href'); // возьмем содержимое атрибута href, должен быть селектором, т.е. например начинаться с # или .
-            if ($(scroll_el).length != 0) { // проверим существование элемента чтобы избежать ошибки
-                $('html, body').animate({ scrollTop: $(scroll_el).offset().top }, 1500); // анимируем скроолинг к элементу scroll_el
+    function handler(event) {
+        var hash = event.target.hash;
+
+
+        if (hash) {
+            event.preventDefault();
+
+            var tag = $(hash);
+
+            if ($(hash).length) {
+                var offset = tag.offset().top;
+                $('html, body').stop().animate({scrollTop: offset},'slow');
             }
-            return false; // выключаем стандартное действие
-        });
-    });
+
+            if(this.href.indexOf('/#')!= -1){
+                location.href = this.href;
+            }
+        }
+    }
+
+    $('.menulink').on( "click", handler );
+
 });

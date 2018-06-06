@@ -6,6 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>@yield('title') - Твоя Полка магазин барахолка</title>
+    <link rel="icon" type="image/png" href="{{ asset('img/LOGOTP2.png') }}" />
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,500,700,400i&amp;subset=cyrillic"
           rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/main.css') }}">
@@ -22,7 +23,7 @@
             <div class=" text-xl-left col-8 col-xl-3 col-lg-3">
                 <a href="/"><img src="{{ asset('img/logo_without.png') }}" alt="Твоя Полка" class="Logo img-fluid"/></a>
             </div>
-            <div class=" col-lg-4 col-xl-4 d-none d-lg-block">
+            <div class="col-lg-4 col-xl-4 d-none d-lg-block">
                 <nav class=" menu__header">
                     <ul class="menu d-flex">
                         <li class="menu__item">
@@ -37,14 +38,15 @@
                     </ul>
                 </nav>
             </div>
-            <div class="ml-auto d-none d-lg-block justify-content-lg-end col-lg-3">
+            <div class="d-none d-lg-block col-lg-4 text-right">
                 @if (Auth::check())
-                    <a href="{{ route('user.profile') }}" class="LogIn d-flex justify-content-end">
+                    <a href="{{ route('user.profile') }}" class="LogIn">
                         <span class="LogIn__text">Личный кабинет <i class="LogIn__icon fas fa-user-alt"></i></span>
                     </a>
+                    <a href="{{ route('user.logout') }}" class="btn_logout"><i class="fas fa-sign-out-alt"></i></a>
                 @else
-                    <a href="#login" class="LogIn d-flex justify-content-end">
-                        <span class="LogIn__text">Авторизироваться <i class="LogIn__icon fas fa-user-alt"></i></span>
+                    <a href="#login" class="LogIn text-right">
+                        <span class="LogIn__text">Авторизироваться <i class="LogIn__icon fas fa-key"></i></span>
                     </a>
                 @endif
             </div>
@@ -160,13 +162,11 @@
         <div class="row justify-content-center">
 
             <div class="m-3 Footer__followUs d-flex justify-content-around col-lg-2 col-md-4 col-6">
-                <a href="https://vk.com/tvoypolka_arkhangelsk"><img src="{{ asset('img/logo-vk.png') }}" alt="Vkontakte"
-                                                                    class="logo-vk"/></a>
-                <a href="https://www.instagram.com/tvoya_polka/"><img src="{{ asset('img/logo-inst.png') }}"
-                                                                      alt="instagram" class="logo-inst"/></a>
+                <a href="https://vk.com/tvoypolka_arkhangelsk"><i class="fab fa-vk"></i></a>
+                <a href="https://www.instagram.com/tvoya_polka/"><i class="fab fa-instagram"></i></a>
             </div>
             <div class="w-100"></div>
-            <div class="text-center m-auto col-12">Все права защищены © 2018 <span
+            <div class="Rights text-center m-auto col-12">Все права защищены © 2018 <span
                         style="white-space:nowrap">Твоя Полка</span></div>
         </div>
     </div>
