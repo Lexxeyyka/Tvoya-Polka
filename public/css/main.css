@@ -1,7 +1,355 @@
-@import 'profile_page.css';
-@import 'recover_page.css';
-@import 'start_page.css';
-@import 'about_page.css';
+/*PROFILE*/
+.UserBlock{
+    color: #453815;
+    padding: 15px 20px;
+    margin: 65px 0 0 0;
+    background-color: #dcf396;
+    border-radius: 5px;
+}
+.UserBlock__user__fullName{
+    font-size: 22px;
+    line-height: 1.2;
+}
+.DateBlock{
+    color: #453815;
+    font-size: 17px;
+    padding: 15px 20px;
+    margin: 25px 0 0 0;
+    height: auto;
+    background-color: #dcf396;
+    border-radius: 5px;
+}
+.ProductsBlock{
+    padding-bottom: 15px;
+    margin: 65px 0 0 0;
+    height:auto;
+    background-color: #dcf396;
+    border-radius: 5px;
+}
+.UserBlock__money__icon{
+    font-size: 15px;
+}
+.UserBlock__btn {
+    display: block;
+    margin-top: 5px;
+    font-size: 17px;
+    padding: 5px;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #9db74c;
+    text-align: center;
+}
+.UserBlock__btn:hover {
+    color: #fff;
+}
+.DateBlock__dateEnding__link__btnExtend{
+    margin-top: 5px;
+    font-size: 17px;
+    padding: 5px;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #9db74c;
+    text-align: center;
+}
+.UserBlock__money__link:hover{
+    text-decoration: none;
+}
+.ProductsBlock__header__switch__item{
+}
+.ProductsBlock__header__switch__item__link:hover{
+    color: #475a2d;
+    text-decoration: overline !important;
+}
+.ProductsBlock__header__switch__item__link{
+    color: #000;
+    font-size: 20px;
+}
+.ProductsBlock__header__switch__item__link span{
+    color: #677b36;
+}
+
+.ProductsBlock__header__switch__item__link.active {
+    color: #677b36;
+    text-decoration: overline;
+}
+
+.ProductsTable{
+    margin: 0 15px 0 15px;
+    background-color: #fff;
+    height: auto;
+    width: auto;
+}
+.ProductsTable__table{
+    margin-bottom: 0 !important;
+}
+td, th{
+    border-color: #fdfbff !important;
+}
+.ProductsTable__table__head{
+    background-color: #c3d58c;
+}
+.ProductsBlock__header{
+    padding:15px;
+}
+
+.profilePage{
+    margin-bottom: 200px;
+}
+
+@media only screen and (max-width: 440px){
+    .ProductsBlock__header__switch__item__link__InShelf, .ProductsBlock__header__switch__item__link__Sold{
+        font-size:18px;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .ProductsBlock__header__switch__item__link__InShelf, .ProductsBlock__header__switch__item__link__Sold{
+        font-size:15px;
+    }
+    td, th{
+        font-size: 13px;
+    }
+}
+@media only screen and (max-width: 360px) {
+    .ProductsBlock__header__switch__item__link__InShelf, .ProductsBlock__header__switch__item__link__Sold{
+        font-size:10px;
+    }
+    td, th{
+        font-size: 8px;
+    }
+}
+/*RECOVERING PASSWORD*/
+
+
+
+.PassRecovering{
+    margin: 100px 0 200px 0;
+}
+
+.PassRecovering__title{
+    color: #453815;
+    font-size: 36px;
+
+}
+.PassRecovering__prompt{;
+    color: #453815;
+    font-size: 18px;
+}
+
+/*Поле ввода*/
+
+.PassRecovering__inputPhone{
+    font-family: Roboto !important;
+    margin-top: 10px;
+    width: 12em !important;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #d9d9d9;
+}
+
+
+.PassRecovering__inputPhone:focus{
+    outline: none;
+
+}
+
+
+/*Кнопка*/
+
+
+
+.PassRecovering__buttonRecovering{
+    margin-top: 10px;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+    color: white;
+    padding: 6px 30px 6px 30px;
+    background-color: #adc359;
+    border: 0
+
+}
+
+.PassRecovering__buttonRecovering:hover{
+    cursor: pointer;
+    background-color: #cad982
+}
+
+.PassRecovering__buttonRecovering:focus{
+    outline: none
+}
+/*Медиазапросы*/
+@media only screen and (max-width: 500px){
+
+    .PassRecovering__title{
+        color: #453815;
+        font-size: 32px;
+
+    }
+
+    .PassRecovering{
+        margin: 50px 0 100px 0;
+    }
+
+}
+
+@media only screen and (max-width: 320px){
+
+    .PassRecovering__inputPhone{
+        padding: 7px;
+    }
+
+    .PassRecovering__prompt{;
+        font-size: 15px;
+    }
+}
+/*START_PAGE*/
+.Info__logo{
+    margin-top: 80px;
+    display: inline-block;
+}
+
+.polka-img{
+    margin-top:40px;
+}
+
+.Info__text{
+    color: #452815;
+    font-size: 45px;
+    margin: 100px 0 200px 0 ;
+    line-height: 1.2;
+    width: auto;
+}
+
+.NewsSection{
+    box-shadow: inset 0 15px 15px  -15px rgba(51, 51, 51, 0.55), inset 0 -15px 15px  -15px #333;
+    background: linear-gradient(#fdfff8, #f6fccf);
+    height: auto;
+    padding: 50px 0 50px 0;
+}
+
+.NewsBlock{
+    border-radius: 5px;
+    padding: 0 !important;
+    box-shadow: 0 0 20px rgba(26, 32, 13, 0.3);
+    background-color: #e9fcb2;
+    margin: 0 0 50px 0;
+    width: 100%;
+    height:auto;
+}
+.TEST-img{
+    margin: 30px;
+    width: auto;
+}
+.NewsBlock__content{
+    box-shadow: 0 -5px 50px rgba(26, 32, 13, 0.2);
+    border-radius: 0 0 5px 5px;
+    padding: 20px !important;
+    background-color: #bfda7f;
+    width: 100%;
+}
+.NewsBlock__content__p__text{
+    margin: 0 !important;
+    font-size: 30px;
+
+}
+.NewsSection__title{
+    color: #212529;
+    margin-bottom: 40px;
+}
+
+.NewsBlock__content__title__item{
+    font-weight: bold;
+}
+/*Медиазапросы*/
+
+@media only screen and (max-width: 1200px)  {
+
+    .Info__text{
+        font-size: 38px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+
+    .Info__text {
+        font-size: 25px;
+        margin: 60px 0 60px 0;
+    }
+
+    .NewsBlock__content__p__text {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 576px)  {
+
+    .Info__text{
+        font-size: 24px;
+        margin: 55px 0 55px 0;
+    }
+}
+
+@media only screen and (max-width: 500px)  {
+
+    .Info__logo{
+        margin-top: 25px;
+    }
+    .NewsBlock__content__p__text{
+        font-size: 17px;
+    }
+
+}
+
+@media only screen and (max-width: 456px)  {
+
+    .NewsSection{
+        padding: 30px 0 30px 0;
+    }
+
+    .TEST-img{
+        margin: 30px;
+        width: 70%;
+    }
+
+    .Info__text{
+        margin: 50px 0 50px 0;
+        font-size: 20px;
+    }
+
+    .NewsBlock__content__p__text{
+        font-size: 15px;
+    }
+
+    .NewsSection__title{
+        margin-bottom: 20px;
+    }
+
+}
+
+@media only screen and (max-width: 386px)  {
+
+    .Info__text{
+        margin: 50px 0 50px 0;
+        font-size: 17px;
+    }
+    .NewsBlock__content__p__text{
+        font-size: 15px;
+    }
+
+}
+
+@media only screen and (max-width: 332px)  {
+
+    .Info__text{
+        margin: 30px 0 30px 0;
+        font-size: 15px;
+
+    }
+    .NewsBlock__content__p__text{
+        font-size: 14px;
+    }
+
+}
 
 body{
     background: #e9fcb2 !important;
@@ -66,7 +414,7 @@ ul, li{
 }
 
 .MenuBar{
-    max-width: 80%;
+    max-width: 90%;
     opacity: 0.9;
     display: none;
     box-shadow:0 0 50px #1a200d;
@@ -466,7 +814,7 @@ ul, li{
         font-size: 20px;
     }
     .SlideMenu__item{
-        font-size: 30px;
+        font-size: 26px;
     }
 }
 
