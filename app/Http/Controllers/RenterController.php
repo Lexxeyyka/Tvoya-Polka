@@ -50,7 +50,6 @@ class RenterController extends Controller
             $products = $rent->products()->whereRaw('amount_of_sold < amount')->get();
         }
 
-
-        return view('renter.profile', compact('renter', 'rent', 'products'));
+        return view('renter.profile', compact('renter', 'rent', 'products', 'action'));
     }
 }

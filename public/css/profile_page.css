@@ -57,18 +57,22 @@
 .ProductsBlock__header__switch__item{
 }
 .ProductsBlock__header__switch__item__link:hover{
-    text-decoration: none;
+    color: #475a2d;
+    text-decoration: overline !important;
 }
 .ProductsBlock__header__switch__item__link{
     color: #000;
     font-size: 20px;
 }
-.ProductsBlock__header__switch__item__link__InShelf{
+.ProductsBlock__header__switch__item__link span{
     color: #677b36;
 }
-.ProductsBlock__header__switch__item__link__Sold{
+
+.ProductsBlock__header__switch__item__link.active {
     color: #677b36;
+    text-decoration: overline;
 }
+
 .ProductsTable{
     margin: 0 15px 0 15px;
     background-color: #fff;

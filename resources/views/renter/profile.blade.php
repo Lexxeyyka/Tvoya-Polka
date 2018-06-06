@@ -13,7 +13,6 @@
                 <div class="UserBlock__money">
                     <span class="UserBlock__money__textPayOut">К выдаче: {{ $rent->profit }} <i class="UserBlock__money__icon fas fa-ruble-sign"></i></span>
                     <a href="#" class="UserBlock__btn">Получить</a>
-                    <a href="{{ route('user.logout') }}" class="UserBlock__btn">Выход</a>
                 </div>
             </div>
             <div class="w-100"></div>
@@ -31,13 +30,13 @@
                 <div class="ProductsBlock__header">
                     <div class="ProductsBlock__header__switch d-flex justify-content-around">
                         <div class="ProductsBlock__header__switch__item">
-                            <a href="/profile/now" class="ProductsBlock__header__switch__item__link">
-                                <span class="ProductsBlock__header__switch__item__link__InShelf">Товары на полке</span>
+                            <a href="/profile/now" class="ProductsBlock__header__switch__item__link {{ $action == 'now' ? ' active' : '' }}">
+                                <span>Товары на полке</span>
                             </a>
                         </div>
                         <div class="ProductsBlock__header__switch__item">
-                            <a href="/profile/sold" class="ProductsBlock__header__switch__item__link">
-                                <span class="ProductsBlock__header__switch__item__link__Sold">Проданные товары</span>
+                            <a href="/profile/sold" class="ProductsBlock__header__switch__item__link {{ $action == 'sold' ? ' active' : '' }}"">
+                                <span>Проданные товары</span>
                             </a>
                         </div>
                     </div>
@@ -55,7 +54,11 @@
                         @foreach ($products as $product)
                         <tr>
                             <td>{{ $product->product_name }}</td>
-                            <td>{{ $product->amount }}</td>
+                            @if ($action == 'now')
+                                <td>{{ $product->amount - $product->amount_of_sold }}</td>
+                            @else
+                                <td>{{ $product->amount_of_sold }}</td>
+                            @endif
                             <td>{{ $product->price }}</td>
                         </tr>
                         @endforeach
@@ -64,7 +67,6 @@
                 </div>
             </div>
         </div>
-
     </div>
 </div>
 @endsection
