@@ -12,7 +12,7 @@
                 </div>
                 <div class="UserBlock__money">
                     <span class="UserBlock__money__textPayOut">К выдаче: {{ $rent->profit }} <i class="UserBlock__money__icon fas fa-ruble-sign"></i></span>
-                    <a href="#" class="UserBlock__btn">Получить</a>
+                    <a href="{{ route('user.money') }}" class="UserBlock__btn">Получить</a>
                 </div>
             </div>
             <div class="w-100"></div>
@@ -35,7 +35,7 @@
                             </a>
                         </div>
                         <div class="ProductsBlock__header__switch__item">
-                            <a href="/profile/sold" class="ProductsBlock__header__switch__item__link {{ $action == 'sold' ? ' active' : '' }}"">
+                            <a href="/profile/sold" class="ProductsBlock__header__switch__item__link {{ $action == 'sold' ? ' active' : '' }}">
                                 <span>Проданные товары</span>
                             </a>
                         </div>
@@ -44,11 +44,11 @@
                 <div class="ProductsTable">
                     <table class="ProductsTable__table table table-bordered">
                         <thead class="ProductsTable__table__head thead">
-                        <tr>
-                            <th scope="col">Название товара</th>
-                            <th scope="col">Количество</th>
-                            <th scope="col">Цена за ед.</th>
-                        </tr>
+                            <tr>
+                                <th scope="col">Название товара</th>
+                                <th scope="col">Количество</th>
+                                <th scope="col">Цена за ед.</th>
+                            </tr>
                         </thead>
                     <tbody>
                         @foreach ($products as $product)
@@ -69,4 +69,5 @@
         </div>
     </div>
 </div>
+
 @endsection

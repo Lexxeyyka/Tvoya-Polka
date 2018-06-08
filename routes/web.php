@@ -10,29 +10,31 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', 'MainController@showHome')->name('home');
-
 /**
  * Роутинг, если пользователь авторизирован
  */
-Route::middleware(['auth'])->group(function () {
+Route::middleware(['auth', 'preventBackHistory'])->group(function () {
     Route::get('profile/{action?}', 'RenterController@showProfile')
         ->where('action', 'sold|now')->name('user.profile');
     Route::get('profile/logout', 'RenterController@getLogout')->name('user.logout');
+    Route::get('profile/money', 'RenterController@showMoneyReceiving')->name('user.money');
 });
 
 /**
  * Роутинг, если пользователь не авторизирован
  */
-Route::middleware(['guest'])->group(function() {
+Route::middleware(['guest', 'preventBackHistory'])->group(function () {
     Route::post('login', 'RenterController@postLogin')->name('user.login');
+    Route::get('recover', 'RenterController@showRecover')->name('user.recover');
 });
 
-Route::get('recover', 'RecoverController@showRecover');
-Route::get('about', 'MainController@showAbout');
-
-Route::get('pass', function() {
+/**
+ * Роутинг базовых страниц сайта
+ */
+Route::get('/', 'MainController@showHome')->name('home');
+Route::get('about', 'MainController@showAbout')->name('about');
+// Генератор паролей
+Route::get('pass', function () {
     $password = request()->get('p');
 
     return Hash::make($password);

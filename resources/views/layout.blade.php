@@ -27,7 +27,7 @@
                 <nav class=" menu__header">
                     <ul class="menu d-flex">
                         <li class="menu__item">
-                            <a href="#">О нас</a>
+                            <a href="about">О нас</a>
                         </li>
                         <li class="menu__item">
                             <a href="/#NewsSection" class="menulink">Новости</a>
@@ -75,7 +75,7 @@
                 <nav>
                     <ul class="SlideMenu d-flex flex-column-reverse justify-content-start">
                         <li class="SlideMenu__item">
-                            <a href="#" class="menu__item__link">О нас</a>
+                            <a href="about" class="menu__item__link">О нас</a>
                         </li>
                         <li class="SlideMenu__item">
                             <a href="/#NewsSection" class="menulink menu__item__link">Новости</a>
@@ -138,7 +138,7 @@
             </div>
             <div class="Footer__tel col-12 d-flex flex-row">
                 <i class="Footer__tel__icon fa fa-phone"></i>
-                <div class="Footer__tel__num">+7 (8182) 43-31-32</div>
+                <tel class="Footer__tel__num">+7 (8182) 43-31-32</tel>
             </div>
             <div class="pt-2 Footer__mail col-12 d-flex flex-row">
                 <i class="Footer__mail__icon fas fa-envelope"></i>

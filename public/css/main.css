@@ -1,3 +1,82 @@
+/*ABOUT US*/
+.aboutTitle h1{
+    color: #453815;
+    margin-top: 150px;
+    font-size: 50px;
+}
+.First_img{
+    margin-top:80px;
+}
+
+.aboutText h3, .aboutText2 h3, .aboutText4 h3, .aboutText3 h3{
+    color: #453815;
+}
+.aboutText h2{
+    margin-top: 100px;
+}
+.aboutText2 h3{
+    margin-top: 170px;
+}
+
+.aboutText h2{
+    color: #453815;
+    font-size: 35px;
+}
+
+.aboutText3 h3{
+    margin-top:100px;
+}
+
+.aboutText4 h3{
+    margin-top:140px;
+}
+
+
+.aboutText p, .aboutText2 p, .aboutText3 p, .aboutText4 p, .aboutTitle p{
+    font-size: 22px;
+}
+
+.Third_img1,.Third_img2,.Third_img3{
+    width: 200px;
+}
+.Third_img2{
+    display: block;
+    margin-left: auto;
+}
+.MailBox{
+    margin-bottom:100px;
+}
+
+@media only screen and (max-width: 992px){
+    .Third_img1,.Third_img2,.Third_img3{
+        width: 400px;
+    }
+    .MailBox{
+        width:500px;
+        margin-top:50px;
+        margin-bottom:100px;
+    }
+    .aboutText3 h3{
+        margin-top:50px;
+    }
+    .aboutText4 h3{
+        margin-top:50px;
+    }
+    .aboutText2 h3{
+        margin-top: 50px;
+    }
+    .aboutText h2{
+        margin-top: 50px;
+    }
+    .aboutTitle h1{
+        color: #453815;
+        margin-top: 50px;
+    }
+    .First_img{
+        margin-top:50px;
+    }
+}
+
 /*PROFILE*/
 .UserBlock{
     color: #453815;
@@ -54,11 +133,9 @@
 .UserBlock__money__link:hover{
     text-decoration: none;
 }
-.ProductsBlock__header__switch__item{
-}
 .ProductsBlock__header__switch__item__link:hover{
     color: #475a2d;
-    text-decoration: overline !important;
+    text-decoration:underline!important;
 }
 .ProductsBlock__header__switch__item__link{
     color: #000;
@@ -70,7 +147,8 @@
 
 .ProductsBlock__header__switch__item__link.active {
     color: #677b36;
-    text-decoration: overline;
+    text-shadow: 0 0 1em #abc653;
+    text-decoration: underline;
 }
 
 .ProductsTable{
@@ -97,13 +175,13 @@ td, th{
 }
 
 @media only screen and (max-width: 440px){
-    .ProductsBlock__header__switch__item__link__InShelf, .ProductsBlock__header__switch__item__link__Sold{
+    .ProductsBlock__header__switch__item__link{
         font-size:18px;
     }
 }
 
 @media only screen and (max-width: 420px) {
-    .ProductsBlock__header__switch__item__link__InShelf, .ProductsBlock__header__switch__item__link__Sold{
+    .ProductsBlock__header__switch__item__link{
         font-size:15px;
     }
     td, th{
@@ -111,13 +189,109 @@ td, th{
     }
 }
 @media only screen and (max-width: 360px) {
-    .ProductsBlock__header__switch__item__link__InShelf, .ProductsBlock__header__switch__item__link__Sold{
+    .ProductsBlock__header__switch__item__link{
         font-size:10px;
     }
     td, th{
         font-size: 8px;
     }
 }
+
+/*RECEIVING MONEY*/
+
+.moneyTitle h1{
+    margin-top:100px;
+    font-size: 36px;
+    color: #453815;
+
+}
+
+.amountMoney{
+    margin: 0 0 50px 0;
+}
+
+.inputCountText{
+    margin-top: 5px;
+    color: #453815;
+    font-size: 18px;
+}
+.inputCountText span{
+    padding-right: 10px;
+}
+
+.chooseAmount{
+    margin-right: 21px;
+}
+
+.inputCountText__icon{
+    margin:5px 0 0 5px;
+    color: #453815;
+}
+
+.inputCount{
+    text-align: center;
+    padding:0 0 0 5px;
+    white-space: nowrap;
+    border-radius: 5px;
+}
+.inputCount:focus{
+    outline: none;
+}
+
+.Myqueries__Title h2{
+    margin: 100px 0 20px 0;
+    font-size:26px;
+    color: #453815;
+}
+
+.Myqueries__Table{
+    background-color: #fff;
+    margin-bottom:100px;
+}
+
+.Myqueries__table__head{
+    background-color: #c3d58c;
+}
+
+
+.Myqueries__table__head th:nth-child(1){
+    width:40%;
+}
+.Myqueries__table__head th:nth-child(2){
+    width:30%;
+}
+.Myqueries__table__head th:nth-child(3){
+    width:30%;
+}
+
+@media only screen and (max-width: 500px) {
+    .moneyTitle h1{
+        margin-top:50px;
+        font-size: 30px;
+    }
+    .Myqueries__Title h2{
+        margin: 70px 0 20px 0;
+    }
+    .Myqueries__Table{
+        margin-bottom:70px;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .moneyTitle h1{
+        margin-top:50px;
+        font-size: 24px;
+    }
+    .Myqueries__Title h2{
+        margin: 50px 0 20px 0;
+    }
+    .Myqueries__Table{
+        background-color: #fff;
+        margin-bottom:50px;
+    }
+}
+
+
 /*RECOVERING PASSWORD*/
 
 
@@ -136,8 +310,6 @@ td, th{
     font-size: 18px;
 }
 
-/*Поле ввода*/
-
 .PassRecovering__inputPhone{
     font-family: Roboto !important;
     margin-top: 10px;
@@ -150,13 +322,7 @@ td, th{
 
 .PassRecovering__inputPhone:focus{
     outline: none;
-
 }
-
-
-/*Кнопка*/
-
-
 
 .PassRecovering__buttonRecovering{
     margin-top: 10px;
@@ -177,7 +343,9 @@ td, th{
 .PassRecovering__buttonRecovering:focus{
     outline: none
 }
+
 /*Медиазапросы*/
+
 @media only screen and (max-width: 500px){
 
     .PassRecovering__title{
@@ -202,7 +370,9 @@ td, th{
         font-size: 15px;
     }
 }
+
 /*START_PAGE*/
+
 .Info__logo{
     margin-top: 80px;
     display: inline-block;
@@ -350,6 +520,11 @@ td, th{
     }
 
 }
+
+
+
+
+/*MAIN*/
 
 body{
     background: #e9fcb2 !important;

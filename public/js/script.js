@@ -33,6 +33,9 @@ jQuery('document').ready(function () {
 
 
 
+    $('input[type=number]').on('mouseup keyup', function () {
+        $(this).val(Math.min(50000, Math.max(0, $(this).val())));
+    });
 
 
     function handler(event) {
