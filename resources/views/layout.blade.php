@@ -27,7 +27,7 @@
                 <nav class=" menu__header">
                     <ul class="menu d-flex">
                         <li class="menu__item">
-                            <a href="about">О нас</a>
+                            <a href="/about">О нас</a>
                         </li>
                         <li class="menu__item">
                             <a href="/#NewsSection" class="menulink">Новости</a>
