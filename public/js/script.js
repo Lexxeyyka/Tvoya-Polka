@@ -1,11 +1,14 @@
 jQuery('document').ready(function () {
-    $('.ChooseTown').click(function(){
+    $('.ChooseTown, .choosetown_slide, #closeDrop').click(function(){
         $('.DropListTown').slideToggle('slow', function() {
         });
     });
 
 
-
+    $('.btn_news_making').click(function(){
+        $('.news_layout').slideToggle('slow', function() {
+        });
+    });
 
 
     $('.SlideMenu__link').click(function(){
@@ -23,8 +26,18 @@ jQuery('document').ready(function () {
 
 
 
-    $('.popup .close_window, .overlay').click(function (){
-        $('.popup, .overlay').css({'opacity':'0', 'visibility':'hidden'});
+    $('.btn_close').click(function(){
+        $(".fail-auth").animate({
+            opacity: "hide"
+        });
+    });
+
+
+
+
+
+    $('.popup .close_window, .overlay, .btn_again').click(function (){
+        $('.popup, .overlay, .fail-auth').css({'opacity':'0', 'visibility':'hidden'});
     });
     $('a[href="#login"]').click(function (e){
         e.preventDefault();
@@ -60,4 +73,8 @@ jQuery('document').ready(function () {
 
     $('.menulink').on( "click", handler );
 
+    $('.btn_news_making').click(function(e) {
+        e.preventDefault();
+        $(this).find('.i_icon').toggleClass('active');
+    });
 });

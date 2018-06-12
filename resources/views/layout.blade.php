@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>@yield('title') - Твоя Полка магазин барахолка</title>
     <link rel="icon" type="image/png" href="{{ asset('img/LOGOTP2.png') }}" />
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,500,700,400i&amp;subset=cyrillic"
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,500,700,400i&amp;subset=cyrillic"
           rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/main.css') }}">
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
@@ -27,7 +27,7 @@
                 <nav class=" menu__header">
                     <ul class="menu d-flex">
                         <li class="menu__item">
-                            <a href="/about">О нас</a>
+                            <a href="{{ route('about') }}">О нас</a>
                         </li>
                         <li class="menu__item">
                             <a href="/#NewsSection" class="menulink">Новости</a>
@@ -74,6 +74,7 @@
                 </div>
                 <nav>
                     <ul class="SlideMenu d-flex flex-column-reverse justify-content-start">
+
                         <li class="SlideMenu__item">
                             <a href="about" class="menu__item__link">О нас</a>
                         </li>
@@ -82,6 +83,9 @@
                         </li>
                         <li class="SlideMenu__item">
                             <a href="#footer" class="menulink menu__item__link">Контакты</a>
+                        </li>
+                        <li class="SlideMenu__item">
+                            <a class="choosetown_slide menulink menu__item__link">Выберите город</a>
                         </li>
                         @if (Auth::check())
                         <li class="SlideMenu__item">
@@ -97,7 +101,19 @@
             </div>
         </div>
     </div>
-    <div class="overlay" ></div>
+    <div class="overlay"></div>
+
+    <div class="fail-auth text-center">
+        <h2>Упс!</h2>
+        <span>Логин или пароль были введены не верно.</span>
+        <div class="wrapper d-flex justify-content-around">
+            <a href="#login" class="btn_again_link">
+                <button type="button" class="btn_again">Еще раз</button>
+            </a>
+            <a href="#login" class="btn_close_link"></a>
+            <button type="button" class="btn_close">Закрыть</button>
+        </div>
+    </div>
     <div class="popup">
         <form class="Form" id="form" method="post" action="{{ route('user.login') }}">
             {{ csrf_field() }}
@@ -123,7 +139,13 @@
 </header>
 <div class="DropListTown">
     <div class="container">
-        <div class="row">
+        <div class="row justify-content-center">
+
+            <ul class="ListTown d-flex flex-column col-10 text-center ">
+                <li><a href="#">Архангельск</a></li>
+                <li><a href="#" class="text-muted">Северодвинск (Скоро открытие)</a></li>
+            </ul>
+            <i id="closeDrop" class="d-lg-none mt-3 close_window fas fa-times"></i>
         </div>
     </div>
 </div>
@@ -138,7 +160,7 @@
             </div>
             <div class="Footer__tel col-12 d-flex flex-row">
                 <i class="Footer__tel__icon fa fa-phone"></i>
-                <tel class="Footer__tel__num">+7 (8182) 43-31-32</tel>
+                <address class="Footer__tel__num">+7 (8182) 43-31-32</address>
             </div>
             <div class="pt-2 Footer__mail col-12 d-flex flex-row">
                 <i class="Footer__mail__icon fas fa-envelope"></i>
