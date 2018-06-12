@@ -12,7 +12,7 @@
                 </p>
             </div>
             <div class="col-lg-6">
-                <img src="{{ asset('img/first_img.png') }}" alt="Твоя Полка" class="First_img img-fluid"/>
+                <img src="{{ asset('img/First_img.png') }}" alt="Твоя Полка" class="First_img img-fluid"/>
             </div>
             <div class="w-100"></div>
 
