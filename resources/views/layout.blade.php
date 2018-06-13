@@ -102,18 +102,20 @@
         </div>
     </div>
     <div class="overlay"></div>
-
+    @if (session()->has('alert'))
     <div class="fail-auth text-center">
-        <h2>Упс!</h2>
-        <span>Логин или пароль были введены не верно.</span>
+        <h2>{{ session()->get('alert')['title'] }}</h2>
+        <span>{{ session()->get('alert')['message'] }}</span>
         <div class="wrapper d-flex justify-content-around">
+            @if (session()->get('alert')['message'] === 'Логин или пароль были введены не верно.')
             <a href="#login" class="btn_again_link">
                 <button type="button" class="btn_again">Еще раз</button>
             </a>
-            <a href="#login" class="btn_close_link"></a>
+            @endif
             <button type="button" class="btn_close">Закрыть</button>
         </div>
     </div>
+    @endif
     <div class="popup">
         <form class="Form" id="form" method="post" action="{{ route('user.login') }}">
             {{ csrf_field() }}

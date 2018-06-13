@@ -21,26 +21,33 @@
             </div>
 
             <div class="col-12 inputCountText amountMoney">
-                <span>На вашем счёте: 800<i class="inputCountText__icon fas fa-ruble-sign"></i></span>
+                <span>На вашем счёте: {{ $rent->profit  }}<i class="inputCountText__icon fas fa-ruble-sign"></i></span>
 
             </div>
 
-            <div class=" col-12 d-flex flex-sm-row flex-column inputCountText">
-                <span class="chooseAmount">Введите желаемую сумму:</span>
-                <div>
-                    <input type="number" step="1" id="contact" class="inputCount" placeholder="Сумма в рублях">
-                    <i class="inputCountText__icon fas fa-ruble-sign"></i>
+            <form method="post">
+                {{ csrf_field() }}
+                <div class=" col-12 d-flex flex-sm-row flex-column inputCountText">
+                    <span class="chooseAmount">Введите желаемую сумму:</span>
+                    <div>
+                        <input name="sum" type="number" step="1" max="{{ $rent->profit }}" id="contact"
+                               class="inputCount"
+                               placeholder="Сумма в рублях" required>
+                        <i class="inputCountText__icon fas fa-ruble-sign"></i>
+                    </div>
                 </div>
-            </div>
 
-            <div class=" col-12 d-flex flex-sm-row flex-column inputCountText">
-                <span>Укажите номер вашей карты:</span>
-                <input type="text" id="contact" class="inputCount" placeholder="0000 0000 0000 0000">
-            </div>
+                <div class=" col-12 d-flex flex-sm-row flex-column inputCountText">
+                    <span>Укажите номер вашей карты:</span>
+                    <input name="card" type="text" id="contact" class="inputCount" placeholder="0000 0000 0000 0000"
+                           minlength="16"
+                           maxlength="16" required>
+                </div>
 
-            <div class="col-12">
-                <button type="submit" class="PassRecovering__buttonRecovering">Отправить запрос</button>
-            </div>
+                <div class="col-12">
+                    <button type="submit" class="PassRecovering__buttonRecovering">Отправить запрос</button>
+                </div>
+            </form>
 
             <div class="col-12  Myqueries__Title">
                 <h2>Мои запросы</h2>
@@ -50,18 +57,20 @@
                 <div class=" Myqueries__Table ">
                     <table class="table table-bordered">
                         <thead class="Myqueries__table__head">
-                            <tr>
-                                <th scope="col">Дата и время</th>
-                                <th scope="col">Сумма</th>
-                                <th scope="col">Статус</th>
-                            </tr>
+                        <tr>
+                            <th scope="col">Дата и время</th>
+                            <th scope="col">Сумма</th>
+                            <th scope="col">Статус</th>
+                        </tr>
                         </thead>
                         <tbody>
+                        @foreach($requests as $request)
                             <tr>
-                                <td>20.06.2018 (17:28)</td>
-                                <td>15 <i class="fas fa-ruble-sign"></i></td>
-                                <td>Ожидание</td>
+                                <td>{{ $request->datetime->format('d.m.Y (H:i)') }}</td>
+                                <td>{{ number_format($request->amount, 0, '', ' ') }} <i class="fas fa-ruble-sign"></i></td>
+                                <td>{{ $request->status == '1' ? 'В обработке' : 'Выплачено' }}</td>
                             </tr>
+                        @endforeach
                         </tbody>
                     </table>
                 </div>

@@ -48,6 +48,8 @@ class Rent extends Model
 
     public function getProfitAttribute()
     {
-        return $this->products()->sum(DB::raw('price * amount_of_sold'));
+        $requests_sum = Request::where('number_contract', '=',  \Auth::user()->number_contract)->sum('amount');
+
+        return $this->products()->sum(DB::raw('price * amount_of_sold')) - $requests_sum;
     }
 }

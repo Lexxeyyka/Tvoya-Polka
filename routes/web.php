@@ -18,6 +18,7 @@ Route::middleware(['auth', 'preventBackHistory'])->group(function () {
         ->where('action', 'sold|now')->name('user.profile');
     Route::get('profile/logout', 'RenterController@getLogout')->name('user.logout');
     Route::get('profile/money', 'RenterController@showMoneyReceiving')->name('user.money');
+    Route::post('profile/money', 'RenterController@postMoneyReceiving');
 });
 
 /**

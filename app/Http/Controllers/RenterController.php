@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Renter;
+use App\Request;
 
 /**
  * Класс для работы со страницами арендатора
@@ -26,7 +27,7 @@ class RenterController extends Controller
             return redirect()->intended('/profile');
         } else {
             // Если данные были введены не верно, переадресовываем на главную страницу
-            return redirect('/');
+            return back()->with('alert', ['title' => 'Упс!', 'message' => 'Логин или пароль были введены не верно.']);
         }
     }
 
@@ -49,7 +50,8 @@ class RenterController extends Controller
      *
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function showRecover() {
+    public function showRecover()
+    {
         // Получаем контент страницы и выводим
         return view('renter.recover');
     }
@@ -88,7 +90,47 @@ class RenterController extends Controller
      */
     public function showMoneyReceiving()
     {
+        // Определяем номер контракта авторизированного пользователя
+        $contract_number = \Auth::user()->number_contract;
+
+        // Получаем данные из модели
+        $renter = Renter::find($contract_number);
+        // Выводим первый результат об аренде текущего пользователя
+        $rent = $renter->rents()->first();
+        // Выводим список заявок пользователя
+        $requests = Request::where('number_contract', '=',  $contract_number)->get();
+
         // Получаем контент страницы и выводим
-        return view('renter.receiving_money');
+        return view('renter.receiving_money', compact('renter', 'rent', 'requests'));
+    }
+
+    /**
+     * Обработка формы для отправки заявки на вывод денежных средств
+     *
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function postMoneyReceiving()
+    {
+        if(request()->has('sum') && request()->has('card')) {
+            // Определяем номер контракта авторизированного пользователя
+            $contract_number = \Auth::user()->number_contract;
+
+            // Новый объект модели Request
+            $request = new Request;
+            // Указываем данные для записи
+            $request->number_contract = $contract_number;
+            $request->amount = intval(request()->post('sum'));
+            $request->datetime = date('Y-m-d H:i:s');
+            $request->status = 1;
+            $request->card_number = intval(request()->post('card'));
+            // Сохраняем в базу данных
+            $request->save();
+
+            // Возвращаемся на предыдущую страницу с сообщением
+            return back()->with('alert', ['title' => 'Успех!', 'message' => 'Заявка отправлена, спасибо!']);
+        } else {
+            // Возвращаем на предыдущую страницу
+            return back();
+        }
     }
 }
