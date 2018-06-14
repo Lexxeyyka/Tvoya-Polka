@@ -13,8 +13,10 @@
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css"
           integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ asset('css/pannellum.css') }}">
     <script src="{{ asset('js/jquery.js') }}"></script>
     <script src="{{ asset('js/script.js') }}"></script>
+    <script src="{{ asset('js/pannellum.js') }}"></script>
 </head>
 <body>
 <header id="header" class="header">
@@ -147,7 +149,7 @@
                 <li><a href="#">Архангельск</a></li>
                 <li><a href="#" class="text-muted">Северодвинск (Скоро открытие)</a></li>
             </ul>
-            <i id="closeDrop" class="d-lg-none mt-3 close_window fas fa-times"></i>
+            <i id="closeDrop" class="closeDrop d-lg-none mt-3 close_window fas fa-times"></i>
         </div>
     </div>
 </div>
@@ -207,7 +209,5 @@
         </div>
     </div>
 </footer>
-
-<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 </body>
 </html>

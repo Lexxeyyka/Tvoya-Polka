@@ -9,8 +9,11 @@
     margin-top:80px;
 }
 
-.aboutText h3, .aboutText2 h3, .aboutText4 h3, .aboutText3 h3{
+.aboutText h3, .aboutText2 h3, .aboutText4 h3, .aboutText3 h3, .titleVR h2{
     color: #453815;
+}
+.titleVR h2{
+    margin-top:100px;
 }
 .aboutText h2{
     margin-top: 100px;
@@ -352,6 +355,21 @@ td, th{
     margin: 15px 0 15px 0;
 }
 
+.deleteNews{
+    position: absolute;
+    right:0;
+    padding: 10px 10px 0 0;
+    font-size: 30px;
+    color: grey;
+}
+.deleteNews:hover{
+    position: absolute;
+    right:0;
+    padding: 10px 10px 0 0;
+    font-size: 30px;
+    color: #cfcfcf;
+    cursor: pointer;
+}
 
 .NewsBlock__content{
     border-radius: 0 0 5px 5px;
@@ -556,11 +574,11 @@ ul, li{
 
 .menu__item__link{
     padding: 0 20px 0 20px;
-    color: #3f2613;
+    color: #3f2613 !important;
     white-space: nowrap;
 }
 .menu__item__link:hover{
-    color: #3f2613;
+    color: #3f2613 !important;
     text-decoration: none;
     white-space: nowrap;
 }
@@ -656,7 +674,15 @@ ul, li{
 }
 
 
+.closeDrop{
+    font-size:20px;
+    transition: all 0.3s ease;
+}
 
+.closeDrop:hover{
+    font-size:20px;
+    color: grey;
+}
 
 
 
@@ -922,6 +948,7 @@ ul, li{
         margin-top:50px;
         margin-bottom:100px;
     }
+
     .aboutText3 h3{
         margin-top:50px;
     }
@@ -1194,4 +1221,10 @@ ul, li{
     .Footer__contacts__title h1{
         font-size: 34px;
     }
+}
+
+#tour {
+    border-radius: 10px;
+    margin-top:50px;
+    height: 70vh;
 }

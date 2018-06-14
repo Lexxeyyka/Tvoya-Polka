@@ -19,10 +19,15 @@ class Renter extends Authenticatable
         'password',
         'address',
         'phone_number',
+        'is_admin',
     ];
 
     protected $hidden = [
         'password',
+    ];
+
+    protected $casts = [
+        'is_admin' => 'boolean',
     ];
 
     public function rents()
