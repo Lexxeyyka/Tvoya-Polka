@@ -931,15 +931,20 @@ ul, li{
 
 
 
-@media only screen and (max-width: 1200px)  {
-
+@media only screen and (max-width: 1198px)  {
+    .aboutText p, .aboutText2 p, .aboutText3 p, .aboutText4 p, .aboutTitle p{
+        font-size: 20px;
+    }
+    .aboutTitle h1{
+        margin-top: 130px;
+    }
     .Info__text{
         font-size: 38px;
     }
 }
 
 
-@media only screen and (max-width: 992px){
+@media only screen and (max-width: 991px){
     .Third_img1,.Third_img2,.Third_img3{
         width: 400px;
     }
@@ -948,7 +953,9 @@ ul, li{
         margin-top:50px;
         margin-bottom:100px;
     }
-
+    .titleVR h2{
+        margin-top:50px;
+    }
     .aboutText3 h3{
         margin-top:50px;
     }
@@ -962,7 +969,6 @@ ul, li{
         margin-top: 50px;
     }
     .aboutTitle h1{
-        color: #453815;
         margin-top: 50px;
     }
     .First_img{
@@ -1148,7 +1154,9 @@ ul, li{
     }
 }
 @media only screen and (max-width: 360px) {
-
+    .titleVR h2{
+        font-size:25px;
+    }
     .SlideMenu__item{
         font-size: 32px;
     }
