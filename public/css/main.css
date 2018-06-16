@@ -300,6 +300,8 @@ td, th{
 
 .PassRecovering__buttonRecovering{
     margin-top: 15px;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
     border-radius: 5px;
     color: white;
@@ -340,7 +342,11 @@ td, th{
 }
 
 .NewsSection{
+    -webkit-box-shadow: inset 0 15px 15px  -15px rgba(51, 51, 51, 0.55), inset 0 -15px 15px  -15px #333;
     box-shadow: inset 0 15px 15px  -15px rgba(51, 51, 51, 0.55), inset 0 -15px 15px  -15px #333;
+    background: -webkit-gradient(linear, left top, left bottom, from(#fdfff8), to(#f6fccf));
+    background: -webkit-linear-gradient(#fdfff8, #f6fccf);
+    background: -o-linear-gradient(#fdfff8, #f6fccf);
     background: linear-gradient(#fdfff8, #f6fccf);
     height: auto;
     padding: 50px 0 50px 0;
@@ -351,6 +357,7 @@ td, th{
 }
 
 .NewsBlock__item{
+    -webkit-box-shadow: 0 1px 15px 1px rgba(51, 51, 51, 0.1);
     box-shadow: 0 1px 15px 1px rgba(51, 51, 51, 0.1);
     margin: 15px 0 15px 0;
 }
@@ -406,12 +413,15 @@ td, th{
 
 .page-link:focus{
     outline: none !important;
+    -webkit-box-shadow: none !important;
     box-shadow: none !important;
 }
 
 /*Making news*/
 .btn_news_making{
     font-size: 20px;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
     border-radius: 5px;
     color: white;
@@ -425,10 +435,14 @@ td, th{
     font-size: 18px;
     margin-right:3px;
     display: inline-block;
+    -webkit-transition: 0.8s;
+    -o-transition: 0.8s;
     transition: 0.8s;
 }
 
 .i_icon.active {
+    -webkit-transform: rotate(-135deg);
+    -ms-transform: rotate(-135deg);
     transform: rotate(-135deg);
 }
 
@@ -475,6 +489,7 @@ body{
     background: #e9fcb2 !important;
     font-family: 'Roboto Condensed', sans-serif !important;
     padding-bottom: 830px;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 
 }
@@ -498,6 +513,9 @@ ul, li{
 /*HEADER*/
 
 .header{
+    background: -webkit-gradient(linear, left top, left bottom, from(#d1e990), to(#bfda7f));
+    background: -webkit-linear-gradient(#d1e990, #bfda7f);
+    background: -o-linear-gradient(#d1e990, #bfda7f);
     background: linear-gradient(#d1e990, #bfda7f);
     padding: 20px 0 20px 0;
     width: auto;
@@ -523,6 +541,8 @@ ul, li{
     padding: 0 13px 0 13px;
     margin: 0 2px 0 2px;
     color: #452815;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
     border-radius: 20px;
     white-space: nowrap;
@@ -538,8 +558,12 @@ ul, li{
     max-width: 90%;
     opacity: 0.9;
     display: none;
+    -webkit-box-shadow:0 0 50px #1a200d;
     box-shadow:0 0 50px #1a200d;
     z-index: 99999;
+    background: -webkit-gradient(linear,left top, left bottom,from(#d1e990),to(#9db74c));
+    background: -webkit-linear-gradient(#d1e990,#9db74c);
+    background: -o-linear-gradient(#d1e990,#9db74c);
     background: linear-gradient(#d1e990,#9db74c);
     height:100%;
     width:auto;
@@ -549,6 +573,7 @@ ul, li{
 }
 
 .closeField{
+    -webkit-box-shadow:0 0 50px #1a200d;
     box-shadow:0 0 50px #1a200d;
     padding: 0 20px 0 20px;
     height: 80px;
@@ -591,10 +616,13 @@ ul, li{
     text-align: right;
     display: block;
     font-size: 60px;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
 .SlideMenu__item:hover{
     background-color: #e6eac8;
+    -webkit-box-shadow: 0 15px 15px  -15px rgba(51, 51, 51, 0.55),  0 -15px 15px  -15px #333;
     box-shadow: 0 15px 15px  -15px rgba(51, 51, 51, 0.55),  0 -15px 15px  -15px #333;
 }
 
@@ -619,8 +647,11 @@ ul, li{
     font-size: 20px;
     font-family: "Roboto Condensed", sans-serif;
     color: #ffffeb;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
     background-color: #9eb852;
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.2);
     box-shadow: 0 1px 1px rgba(0,0,0,0.2);
 }
 .LogIn__text:hover{
@@ -634,6 +665,8 @@ ul, li{
     font-family: "Roboto Condensed", sans-serif;
     font-style: italic;
     color: #452815;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
 
@@ -655,6 +688,7 @@ ul, li{
 .DropListTown{
     display: none;
     background-color: rgb(235, 240, 204);
+    -webkit-box-shadow: inset 0 15px 15px  -15px rgba(51, 51, 51, 0.55), inset  0 -15px 15px  -18px #333;
     box-shadow: inset 0 15px 15px  -15px rgba(51, 51, 51, 0.55), inset  0 -15px 15px  -18px #333;
 }
 
@@ -665,6 +699,8 @@ ul, li{
 .ListTown li a{
     font-size: 30px;
     color: #9eb852;
+    -webkit-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
     transition: 0.3s ease;
 }
 
@@ -676,6 +712,8 @@ ul, li{
 
 .closeDrop{
     font-size:20px;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
 
@@ -704,6 +742,8 @@ ul, li{
 
 .Footer__tel__icon{
     margin: 5px 0 0 0;
+    -webkit-transform: scale(-1, 1);
+    -ms-transform: scale(-1, 1);
     transform: scale(-1, 1);
 }
 
@@ -730,6 +770,8 @@ ul, li{
 .fab{
     color: white;
     font-size: 40px;
+    -webkit-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
     transition: 0.3s ease;
 }
 .fab:hover{
@@ -744,8 +786,12 @@ ul, li{
     width: 400px;
     border-radius: 5px;
     padding: 10px 20px 10px 20px;
+    -webkit-box-shadow: 0 25px 27px rgba(0,0,0,0.1);
     box-shadow: 0 25px 27px rgba(0,0,0,0.1);
     color: #000000;
+    background: -webkit-gradient(linear, left top, left bottom, from(#ffffeb), to(#fffcf3));
+    background: -webkit-linear-gradient(#ffffeb, #fffcf3);
+    background: -o-linear-gradient(#ffffeb, #fffcf3);
     background: linear-gradient(#ffffeb, #fffcf3);
 }
 .Form__label{
@@ -777,6 +823,8 @@ ul, li{
     font-style: italic;
     color: #453815;
     text-decoration: underline;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
 .Form__recover__pass:hover{
@@ -787,6 +835,8 @@ ul, li{
     margin: 15px 0 15px 0;
 }
 .Form__button__auth{
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
     border-radius: 2px;
     color: white;
@@ -806,6 +856,7 @@ ul, li{
 .FormInfo{
     padding: 10px 0 10px 0;
     border-radius: 5px;
+    -webkit-box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     background-color: rgba(215, 255, 75, 0.36);
     text-align: center;
@@ -830,11 +881,17 @@ ul, li{
     top: 0;
     visibility: hidden;
     z-index: 99999;
+    -webkit-transition: opacity .5s;
+    -o-transition: opacity .5s;
     transition: opacity .5s;
 }
 .fail-auth{
     padding: 30px;
+    -webkit-box-shadow: 0 0 20px #9b000c;
     box-shadow: 0 0 20px #9b000c;
+    background: -webkit-gradient(linear, left top, left bottom, from(#ffffeb), to(#fffcf3));
+    background: -webkit-linear-gradient(#ffffeb, #fffcf3);
+    background: -o-linear-gradient(#ffffeb, #fffcf3);
     background: linear-gradient(#ffffeb, #fffcf3);
     border-radius: 10px;
     left: 50%;
@@ -844,6 +901,8 @@ ul, li{
     top: 50%;
     visibility: visible;
     z-index: 999999;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
 .fail-auth span{
@@ -854,6 +913,7 @@ ul, li{
     padding: 5px 20px 5px 20px;
     font-size: 20px;
     border:none;
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.2);
     box-shadow: 0 1px 1px rgba(0,0,0,0.2);
     border-radius: 7px;
     margin-top:15px;
@@ -881,7 +941,11 @@ ul, li{
     top: 50%;
     visibility: hidden;
     z-index: 999998;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+    -webkit-transition: opacity .5s, top .5s;
+    -o-transition: opacity .5s, top .5s;
     transition: opacity .5s, top .5s;
 }
 .popup .close_window {
@@ -902,7 +966,10 @@ ul, li{
     color: #fff;
     background-color: #9db74c;
     text-align: center;
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.2);
     box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+    -webkit-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
     transition: 0.3s ease;
 }
 .btn_logout:hover{
@@ -917,7 +984,10 @@ ul, li{
     color: #fff;
     background-color: #9db74c;
     text-align: center;
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.2);
     box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+    -webkit-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
     transition: 0.3s ease;
 }
 

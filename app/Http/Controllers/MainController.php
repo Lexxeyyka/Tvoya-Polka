@@ -38,17 +38,17 @@ class MainController extends Controller
 
     public function postNewsAdd()
     {
-        if(\Auth::user()->is_admin) {
+        if (\Auth::user()->is_admin) {
             $validator = \Validator::make(request()->all(), [
                 'title' => 'required|max:255',
-                'text' => 'required',
+                'text'  => 'required',
                 'image' => 'image|mimes:jpeg,png,jpg',
             ], [
                 'title.required' => 'Пожалуйста, укажите название новости',
-                'title.max' => 'Название новости не может быть больше 255 символов',
-                'text.required' => 'Пожалуйста, укажите текст новости',
-                'image.image'  => 'Пожалуйста, выберите изображение',
-                'image.mimes'  => 'Допустимые форматы изображений: jpeg, png, jpg',
+                'title.max'      => 'Название новости не может быть больше 255 символов',
+                'text.required'  => 'Пожалуйста, укажите текст новости',
+                'image.image'    => 'Пожалуйста, выберите изображение',
+                'image.mimes'    => 'Допустимые форматы изображений: jpeg, png, jpg',
             ]);
 
             if ($validator->fails()) {
@@ -60,16 +60,29 @@ class MainController extends Controller
                 $post->title = request()->get('title');
                 $post->text = request()->get('text');
                 $post->datetime = date('Y-m-d H:i:s');
-                if(request()->file('image')) {
+                if (request()->file('image')) {
                     $image = request()->file('image');
-                    $image_name = time().'.'.$image->getClientOriginalExtension();
+                    $image_name = time() . '.' . $image->getClientOriginalExtension();
                     $destinationPath = public_path('/uploads/news');
                     $image->move($destinationPath, $image_name);
                     $post->image_url = $image_name;
                 }
                 $post->save();
+
                 return back()->with('alert', ['title' => 'Успех!', 'message' => 'Новость успешно добавлена!']);
             }
+        } else {
+            return back();
+        }
+    }
+
+    public function getNewsRemove($id)
+    {
+        $post = News::find($id)->first();
+        if ($post !== null) {
+            News::destroy($id);
+
+            return back()->with('alert', ['title' => 'Успех!', 'message' => 'Новость успешно удалена!']);
         } else {
             return back();
         }

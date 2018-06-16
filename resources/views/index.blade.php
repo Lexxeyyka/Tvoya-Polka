@@ -48,7 +48,9 @@
                             @foreach($posts as $post)
                                 <div class="col-md-6">
                                     <div class="card NewsBlock__item ">
-                                        <i class="deleteNews fas fa-times"></i>
+                                        @if (Auth::check() && Auth::user()->is_admin)
+                                            <a href="{{ route('news.remove', $post->id_news) }}" onclick="return confirm('Вы уверены, что хотите удалить данную новость?');"><i class="deleteNews fas fa-times"></i></a>
+                                        @endif
                                         <img class="card-img-top" src="{{ $post->image_url ? asset('uploads/news/' . $post->image_url) : asset('img/TEST.png') }}"
                                              alt="Card image cap">
                                         <div class="card-body NewsBlock__content">

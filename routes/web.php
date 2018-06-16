@@ -20,6 +20,7 @@ Route::middleware(['auth', 'preventBackHistory'])->group(function () {
     Route::get('profile/money', 'RenterController@showMoneyReceiving')->name('user.money');
     Route::post('profile/money', 'RenterController@postMoneyReceiving');
     Route::post('news/add', 'MainController@postNewsAdd')->name('news.add');
+    Route::get('news/remove/{id}', 'MainController@getNewsRemove')->name('news.remove');
 });
 
 /**
